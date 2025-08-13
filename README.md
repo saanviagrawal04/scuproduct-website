@@ -198,7 +198,7 @@ MIT License - see LICENSE file for details
 - Email: productspacescu@gmail.com
 - Location: Santa Clara University, Business School
 - LinkedIn: [SCU Product Launch](https://www.linkedin.com/company/scu-product-space/)
-- Instagram: [@santaclara.productspace](https://www.instagram.com/santaclara.productspace/)
+- Instagram: [@scu_productlaunch](https://www.instagram.com/scu_productlaunch/)
 
 ---
 
