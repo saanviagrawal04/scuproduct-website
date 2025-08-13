@@ -1,4 +1,4 @@
-# Job Sources Guide - ProductSpace Website
+# Job Sources Guide - Product Launch Website
 
 This guide explains the different approaches for sourcing job postings and their trade-offs.
 

@@ -20,7 +20,7 @@ app.get('/api/jobs', (req, res) => {
         success: true,
         jobs: jobs,
         count: jobs.length,
-        source: 'ProductSpace Job Board'
+        source: 'Product Launch Job Board'
     });
 });
 
@@ -133,7 +133,7 @@ app.post('/api/jobs', (req, res) => {
             description: description || 'Product management opportunity. Click the link to learn more and apply.',
             link: link,
             pubDate: new Date(),
-            source: 'ProductSpace'
+            source: 'Product Launch'
         };
         
         jobs.unshift(newJob); // Add to beginning
@@ -232,11 +232,11 @@ Email: ${email}
 Occupation: ${occupation}
 Date: ${new Date().toLocaleString()}
 
-This person has subscribed to the ProductSpace newsletter.
+        This person has subscribed to the Product Launch newsletter.
         `;
         
         // For now, we'll just log the subscription
-        // In a real implementation, you'd send this to scuproductspace@gmail.com
+        // In a real implementation, you'd send this to productspacescu@gmail.com
         console.log('Newsletter subscription:', emailContent);
         
         res.json({

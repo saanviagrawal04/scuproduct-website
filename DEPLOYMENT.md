@@ -1,6 +1,6 @@
-# Deployment Guide - ProductSpace Website
+# Deployment Guide - Product Launch Website
 
-This guide covers different deployment options for the ProductSpace website with real job postings.
+This guide covers different deployment options for the Product Launch website with real job postings.
 
 ## Option 1: Heroku (Recommended for Beginners)
 
@@ -25,7 +25,7 @@ This guide covers different deployment options for the ProductSpace website with
 
 3. **Create Heroku app**
    ```bash
-   heroku create your-productspace-app
+   heroku create your-productlaunch-app
    ```
 
 4. **Deploy**

@@ -1,23 +1,26 @@
-# ProductSpace - Santa Clara University Product Management Club
+# Product Launch - Santa Clara University Product Management Club
 
-A modern, responsive website for the Santa Clara University Product Management Club featuring real job postings from LinkedIn RSS feeds.
+A modern, responsive website for the Santa Clara University Product Launch Product Management Club (PLPMC). This elegant website showcases the club's mission, upcoming events, board members, and provides a newsletter subscription system.
 
 ## Features
 
-- **Real Job Postings**: Automatically fetches and displays real product management job opportunities from LinkedIn RSS feeds
-- **Responsive Design**: Modern, mobile-friendly interface
-- **Job Filtering**: Filter jobs by type (internship/full-time)
-- **Community Job Posting**: Allow community members to post job opportunities
-- **Newsletter Subscription**: Email signup for updates
-- **Event Management**: Showcase upcoming events and workshops
+- **Elegant Design**: Modern, responsive interface with beautiful typography and seasonal aesthetics
+- **Club Information**: Comprehensive showcase of the Product Launch mission and values
+- **Board Member Profiles**: Meet the team behind Product Launch with professional headshots
+- **Event Showcase**: Highlight upcoming events and workshops
+- **Newsletter Subscription**: Custom email signup form with occupation tracking
+- **Responsive Design**: Mobile-friendly interface that works on all devices
+- **Professional Typography**: Beautiful Cormorant Garamond font for enhanced readability
+- **Modern Navigation**: Light, transparent navigation with glassmorphism effects
 
 ## Technology Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Backend**: Node.js with Express
-- **Job Data**: LinkedIn RSS feeds
-- **Styling**: Custom CSS with CSS Grid and Flexbox
-- **Icons**: Font Awesome
+- **Backend**: Node.js with Express.js
+- **Styling**: Custom CSS with CSS Grid, Flexbox, and CSS Custom Properties
+- **Typography**: Google Fonts (Cormorant Garamond, Inter, Playfair Display)
+- **Icons**: Font Awesome 6.0
+- **Responsive Design**: Mobile-first approach with breakpoint optimization
 
 ## Setup Instructions
 
@@ -31,7 +34,7 @@ A modern, responsive website for the Santa Clara University Product Management C
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd ProductSpace-Website
+   cd ProductLaunch-Website
    ```
 
 2. **Install dependencies**
@@ -41,7 +44,7 @@ A modern, responsive website for the Santa Clara University Product Management C
 
 3. **Start the development server**
    ```bash
-   npm run dev
+   npm start
    ```
 
 4. **Open your browser**
@@ -59,78 +62,84 @@ A modern, responsive website for the Santa Clara University Product Management C
    npm start
    ```
 
-## How the Job System Works
+## Key Features Explained
 
-### LinkedIn RSS Integration
+### Typography & Design
+- **Cormorant Garamond**: Primary font for headings and titles, providing elegant seasonal aesthetics
+- **Inter**: Clean, modern sans-serif for body text and navigation
+- **Playfair Display**: Serif font for section headers and accents
 
-The website fetches real job postings from LinkedIn RSS feeds:
+### Newsletter System
+- **Custom Form**: Name, email, and occupation fields
+- **Backend Processing**: Server-side validation and logging
+- **Fallback Option**: Google Form alternative link
 
-- Product Management jobs
-- Product Management Internships
-- Associate Product Manager positions
-- Senior Product Manager positions
+### Responsive Design
+- **Mobile-First**: Optimized for all screen sizes
+- **CSS Grid & Flexbox**: Modern layout techniques
+- **Custom Properties**: Easy theming and maintenance
 
-### Job Data Processing
-
-1. **RSS Feed Fetching**: Server fetches multiple LinkedIn RSS feeds
-2. **Data Parsing**: XML data is parsed and converted to structured job objects
-3. **Duplicate Removal**: Duplicate jobs are filtered out
-4. **Data Cleaning**: Job descriptions are cleaned and formatted
-5. **Client Display**: Jobs are displayed in a responsive grid layout
-
-### Features
-
-- **Real-time Updates**: Jobs are fetched fresh on each page load
-- **Manual Refresh**: Users can manually refresh job listings
-- **Filtering**: Filter by job type (internship/full-time)
-- **Direct Application**: Click "Apply on LinkedIn" to go directly to the job posting
-- **Community Posting**: Members can post additional job opportunities
+### Recent Design Improvements
+- **Typography**: Updated to Cormorant Garamond for elegant seasonal aesthetics
+- **Navigation**: Light, transparent overlay with modern glassmorphism effects
+- **Section Dividers**: Beautiful burgundy dividers (#8d2b2b) for visual separation
+- **Image Handling**: Comprehensive error handling with fallback placeholders
+- **Spacing**: Optimized section spacing for better visual hierarchy
 
 ## API Endpoints
 
-- `GET /api/jobs` - Fetch job listings from LinkedIn RSS feeds
-- `GET /api/health` - Health check endpoint
+- `POST /api/newsletter` - Handle newsletter subscriptions
+- `GET /` - Serve the main website
 
 ## File Structure
 
 ```
-ProductSpace-Website/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles
-├── script.js           # Frontend JavaScript
+ProductLaunch-Website/
+├── index.html          # Main HTML file with club information
+├── styles.css          # Comprehensive CSS with modern design system
+├── script.js           # Frontend JavaScript for interactivity
 ├── server.js           # Node.js backend server
-├── package.json        # Node.js dependencies
-├── README.md           # This file
-└── assets/             # Images and other assets
-    ├── *.jpeg
-    ├── *.png
-    └── *.jpg
+├── package.json        # Project dependencies and scripts
+├── README.md           # This documentation file
+├── DEPLOYMENT.md       # Deployment instructions
+└── Images/             # Club member photos and assets
+    ├── Mai.jpeg        # Treasurer headshot
+    ├── Saanvi.png      # Co-President headshot
+    ├── Vaishnavi.jpg   # Co-President headshot
+    ├── Noor.jpeg       # VP of Marketing headshot
+    ├── Saee.jpeg       # VP of Relations headshot
+    ├── Sanjita.png     # Secretary headshot
+    ├── firstMeeting1.jpeg # Club meeting photo
+    ├── SCU.jpeg        # Background image
+    └── logo.png        # Club logo
 ```
 
 ## Customization
 
-### Adding New Job Sources
+### Typography & Fonts
 
-To add new job sources, modify the `linkedInRSSFeeds` array in `server.js`:
-
-```javascript
-const linkedInRSSFeeds = [
-    'https://www.linkedin.com/jobs/rss/jobs-in-product-management',
-    'https://www.linkedin.com/jobs/rss/jobs-in-product-management-internship',
-    // Add your new RSS feed URL here
-];
-```
-
-### Styling Changes
-
-The website uses CSS custom properties for easy theming. Main colors are defined in `styles.css`:
+The website uses a sophisticated font hierarchy:
 
 ```css
 :root {
-    --primary-color: #8b2a2a;
-    --secondary-color: #f8f9fa;
-    --text-light: #6c757d;
-    --white: #ffffff;
+    --font-primary: 'Cormorant Garamond', serif;      /* Headings */
+    --font-secondary: 'Inter', sans-serif;            /* Body text */
+    --font-accent: 'Playfair Display', serif;         /* Section headers */
+}
+```
+
+### Color Scheme
+
+The design system uses carefully chosen colors:
+
+```css
+:root {
+    --primary-color: #8d2b2b;        /* Burgundy - main brand color */
+    --secondary-color: #f4f1ec;      /* Cream - background accents */
+    --accent-color: #d4a574;         /* Gold - highlights */
+    --text-dark: #2c2c2c;            /* Dark text */
+    --text-light: #666;              /* Light text */
+    --white: #ffffff;                /* Pure white */
 }
 ```
 
@@ -146,18 +155,20 @@ To add new sections to the website:
 
 ### Common Issues
 
-1. **Jobs not loading**
-   - Check if the Node.js server is running
-   - Verify internet connection
-   - Check browser console for errors
+1. **Images not loading**
+   - Check if image files exist in the project directory
+   - Verify file extensions match HTML references
+   - Check browser console for 404 errors
 
-2. **CORS errors**
-   - Ensure the server is running on the correct port
-   - Check that the API_BASE_URL is correctly set in `script.js`
+2. **Fonts not displaying**
+   - Ensure internet connection for Google Fonts
+   - Check if fonts are properly imported in HTML
+   - Verify font names in CSS match imported fonts
 
-3. **LinkedIn RSS feeds not accessible**
-   - LinkedIn may occasionally block requests
-   - The system includes error handling and fallback options
+3. **Server not starting**
+   - Check if port 3000 is available
+   - Verify Node.js and npm are installed
+   - Check package.json for correct dependencies
 
 ### Debug Mode
 
@@ -184,9 +195,11 @@ MIT License - see LICENSE file for details
 
 ## Contact
 
-- Email: productspace@scu.edu
+- Email: productspacescu@gmail.com
 - Location: Santa Clara University, Business School
+- LinkedIn: [SCU Product Launch](https://www.linkedin.com/company/scu-product-space/)
+- Instagram: [@santaclara.productspace](https://www.instagram.com/santaclara.productspace/)
 
 ---
 
-**Note**: This website uses LinkedIn RSS feeds for job data. Please respect LinkedIn's terms of service and rate limiting policies when using this system. 
+**Note**: This website showcases the Product Launch Product Management Club at Santa Clara University. For questions or collaboration opportunities, please reach out through the contact information above. 

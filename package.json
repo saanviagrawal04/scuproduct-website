@@ -1,5 +1,5 @@
 {
-  "name": "productspace-website",
+  "name": "productlaunch-website",
   "version": "1.0.0",
   "description": "Santa Clara University Product Management Club Website",
   "main": "server.js",
@@ -26,6 +26,6 @@
     "web-scraping",
     "rss-feeds"
   ],
-  "author": "ProductSpace Team",
+  "author": "Product Launch Team",
   "license": "MIT"
 } 

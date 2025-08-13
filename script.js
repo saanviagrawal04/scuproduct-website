@@ -25,11 +25,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+    
+    // Handle image loading errors
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('error', function() {
+            console.log('Image failed to load:', this.src);
+            // Add a class to trigger fallback styling
+            this.classList.add('image-error');
+        });
+    });
 });
 
 // Initialize page
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('ProductSpace website loaded successfully!');
+    console.log('Product Launch website loaded successfully!');
     
     // Newsletter form handling
     const newsletterForm = document.getElementById('newsletterForm');
